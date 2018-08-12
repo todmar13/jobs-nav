@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { Platform, SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation'
 
 import AuthScreen from './screens/AuthScreen'
@@ -46,6 +46,7 @@ export default class App extends React.Component {
             navigationOptions: {
               headerStyle: {
                 backgroundColor: '#f4511e',
+                /* marginTop is already in header, this is not necessary...marginTop: Platform.OS === 'android' ? 24 : 0 */
               },
               headerTintColor: '#fff',
               headerTitleStyle: {
